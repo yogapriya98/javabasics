@@ -4,7 +4,7 @@ public class Car {
 	private String model;
 	private double speed;
 	public Car() {
-		
+		System.out.println("cons called");
 	}
 	
 	public String getModel() {
@@ -30,6 +30,7 @@ public class Car {
     	speed+=5;
     	
     }
+   // public Car(int)
 	public static void main(String s[]) {
 		Car car1 = new Car();
 		Car car2 = new Car();
