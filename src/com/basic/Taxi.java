@@ -2,8 +2,11 @@ package com.basic;
 
 public class  Taxi extends Car{
 	public Taxi() {
-		super();
-		System.out.println("empty cons call");
+	//	super();
+	//System.out.println("taxi brake call");
+	}
+	public void brake() {
+		System.out.println("taxi brake call");
 	}
 	public Taxi(int i) {
 		//super();

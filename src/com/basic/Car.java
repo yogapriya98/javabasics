@@ -30,7 +30,9 @@ public class Car {
     	speed+=5;
     	
     }
-   // public Car(int)
+     public void brake() {
+    	 System.out.println("car brake");
+     }
 	public static void main(String s[]) {
 		Car car1 = new Car();
 		Car car2 = new Car();
