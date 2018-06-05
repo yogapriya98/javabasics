@@ -24,7 +24,28 @@ public class ControlProgramsExample {
 			System.out.println(count);
 			count++;
 		}
-		}
+		int i=0;
+		do {
+			System.out.println("do while "+i);
+			i++;
+		}while(i<10);
 		
+		
+		for (i=0; i<10; i++) 
+		System.out.println("for "+i);
+
+
+	for (i=0; i<10; i++) {
+		if(i==3) {
+			continue;
+		}
+	System.out.println("for break"+i);
+	if(i==5) {
+	 break;
 	}
+		}
+}
+}
+		
+
 
