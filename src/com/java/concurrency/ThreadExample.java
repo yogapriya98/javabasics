@@ -6,13 +6,12 @@ public class ThreadExample extends Thread{
 		this.name = name;
 		setName(name);
 		start();
-		
 	}
 	@Override
 		public void run() {
-			super.run();
+		//super.run();
 	for(int i=0;i<10;i++) {
-		System.out.println(name +" = " +i+""+Thread.currentThread());
+		System.out.println(name +" = " +i+""+Thread.currentThread());  //Thread.currentThread()->call toString()
 		try {
 			Thread.sleep(30);
 		} catch (InterruptedException e) {
@@ -24,6 +23,13 @@ public class ThreadExample extends Thread{
 	public static void main(String[] args) {
 		ThreadExample one = new  ThreadExample("one");
 		ThreadExample two = new  ThreadExample("two");
+		System.out.println("main done");
+		try {
+			one.join();     //join()-wait for thread to die
+			two.join();
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
 		System.out.println("main complete"+Thread.currentThread());
 	}
 
